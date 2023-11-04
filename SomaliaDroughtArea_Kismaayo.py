@@ -17,7 +17,7 @@ class CalculateTimeseries:
     def make_cube(self):
         self.s2cube = self.connection.load_collection(
             "SENTINEL2_L2A",
-            temporal_extent=["2023-09-01", "2023-11-04"],
+            temporal_extent=["2019-01-01", "2023-11-04"],
             bands=["B03","B04", "B08"],
         )
 
