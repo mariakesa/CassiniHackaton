@@ -39,12 +39,12 @@ class CalculateTimeseries:
         timeseries_ndvi = self.ndvi.aggregate_spatial(geometries=fields, reducer="mean")
         job = timeseries_ndvi.execute_batch(out_format="CSV", title="NDVI timeseries")
         #timeseries = self.ndvi.aggregate_spatial(geometries=fields, reducer="mean")
-        job.get_results().download_file("ndvi-results/ndvi-jamaame.csv")
+        job.get_results().download_file("ndvi-results/ndvi-kismaayo.csv")
         #Calculate ndwi and save
         timeseries_ndwi = self.ndwi.aggregate_spatial(geometries=fields, reducer="mean")
         job = timeseries_ndwi.execute_batch(out_format="CSV", title="NDWI timeseries")
         #timeseries = self.ndvi.aggregate_spatial(geometries=fields, reducer="mean")
-        job.get_results().download_file("ndvi-results/ndwi-jamaame.csv")
+        job.get_results().download_file("ndvi-results/ndwi-kismaayo.csv")
       
 #Drought data from Jamame (Jamaame) region of Kenya.
 fields=json.loads("""
