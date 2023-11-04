@@ -47,7 +47,7 @@ class CalculateTimeseries:
         job.get_results().download_file("ndvi-results/ndwi-jamaame.csv")
       
 #Drought data from Jamame (Jamaame) region of Kenya.
-fields="""
+fields=json.loads("""
 {
   "type": "FeatureCollection",
   "features": [
@@ -84,6 +84,6 @@ fields="""
     }
   ]
 }
-"""
+""")
       
 CalculateTimeseries().run_pipeline(fields)
