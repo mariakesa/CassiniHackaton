@@ -86,4 +86,4 @@ fields="""
 }
 """
       
-CalculateYearlyIndices().run_pipeline(fields)
+CalculateTimeseries().run_pipeline(fields)
